@@ -1,0 +1,14 @@
+@use "./_partials/variables.scss" as *;
+@use "./_partials/mixins.scss" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
