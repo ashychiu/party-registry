@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./styles/global.scss";
-import ItemList from "./components/ItemList.js";
+
 import AssignedList from "./components/AssignedList";
 import NotYetAssigned from "./components/NotYetAssigned";
 import Header from "./components/Header";
+import Registry from "./components/Registry";
+import ItemList from "./components/ItemList";
 
 const items = [
   {
@@ -140,8 +142,7 @@ function App() {
       );
     }
   };
-  console.log("assign", assignees);
-  console.log("attend", attendees);
+
   return (
     <>
       <Header />
