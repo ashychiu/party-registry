@@ -3,6 +3,7 @@ import "./styles/global.scss";
 import ItemList from "./components/ItemList.js";
 import AssignedList from "./components/AssignedList";
 import NotYetAssigned from "./components/NotYetAssigned";
+import Header from "./components/Header";
 
 const items = [
   {
@@ -142,15 +143,18 @@ function App() {
   console.log("assign", assignees);
   console.log("attend", attendees);
   return (
-    <div className="App">
-      <ItemList
-        items={registry}
-        assignees={assignees}
-        handleAssign={handleAssign}
-      />
-      <AssignedList registry={registry} />
-      <NotYetAssigned registry={registry} />
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <ItemList
+          items={registry}
+          assignees={assignees}
+          handleAssign={handleAssign}
+        />
+        <AssignedList registry={registry} />
+        <NotYetAssigned registry={registry} />
+      </div>
+    </>
   );
 }
 

@@ -3,12 +3,19 @@ import React from "react";
 const ItemList = ({ items, assignees, handleAssign }) => {
   return (
     <>
-      <h1>Party Registry</h1>
+      <h1>Items</h1>
       <div className="item-list">
         {items.map((item) => {
           const price = item.price.toFixed(2);
           return (
-            <div key={item.id} className="item-list__container">
+            <div
+              key={item.id}
+              className={
+                item.assignedTo
+                  ? "assigned item-list__container"
+                  : "item-list__container"
+              }
+            >
               <p>{item.name}</p>
               <p>${price}</p>
               <select
