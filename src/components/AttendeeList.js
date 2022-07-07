@@ -3,7 +3,6 @@ import React from "react";
 const AttendeeList = ({ item, assignees, handleAssign }) => {
   return (
     <>
-      {" "}
       <select
         name="attendee"
         id="attendee"

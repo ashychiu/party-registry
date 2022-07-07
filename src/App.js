@@ -4,7 +4,6 @@ import "./styles/global.scss";
 import AssignedList from "./components/AssignedList";
 import NotYetAssigned from "./components/NotYetAssigned";
 import Header from "./components/Header";
-import Registry from "./components/Registry";
 import ItemList from "./components/ItemList";
 
 const items = [

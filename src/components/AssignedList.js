@@ -8,11 +8,9 @@ const AssignedList = ({ registry }) => {
         return (
           <div key={item.id}>
             {item.assignedTo && (
-              <>
-                <p>
-                  {item.name} - {item.assignedTo}
-                </p>
-              </>
+              <p>
+                {item.name} - {item.assignedTo}
+              </p>
             )}
           </div>
         );
