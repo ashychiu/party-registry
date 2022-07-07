@@ -5,6 +5,7 @@ import AssignedList from "./components/AssignedList";
 import NotYetAssigned from "./components/NotYetAssigned";
 import Header from "./components/Header";
 import ItemList from "./components/ItemList";
+import Footer from "./components/Footer";
 
 const items = [
   {
@@ -154,6 +155,7 @@ function App() {
         <AssignedList registry={registry} />
         <NotYetAssigned registry={registry} />
       </div>
+      <Footer />
     </>
   );
 }
