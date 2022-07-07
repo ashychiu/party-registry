@@ -3,7 +3,7 @@ import React from "react";
 const AssignedList = ({ registry }) => {
   return (
     <div className="sticky">
-      <h1>Assigned to:</h1>
+      <h1>Assigned:</h1>
       {registry.map((item) => {
         return (
           <div key={item.id}>
