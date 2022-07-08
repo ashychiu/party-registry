@@ -39,19 +39,26 @@ body,
 }
 
 .item-list {
-  width: 40%;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
+  @include tablet {
+    width: 40%;
+  }
 }
 
 .item-list__container {
-  width: 200px;
+  width: 100%;
   border: 1px solid black;
   margin: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    width: 200px;
+  }
 }
 
 select {
@@ -61,6 +68,7 @@ select {
 }
 
 .sticky {
+  padding: 16px;
   top: 0;
   position: sticky;
   align-self: flex-start;
@@ -76,7 +84,7 @@ select {
 .footer {
   text-align: center;
   font-size: 16px;
-  color: #fff;
+  color: white;
   background-color: #96bf48;
   &__icon {
     position: relative;
@@ -88,4 +96,9 @@ select {
 a {
   text-decoration: none;
   color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
 }

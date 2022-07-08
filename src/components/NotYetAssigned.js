@@ -1,12 +1,24 @@
 import React from "react";
 
 const NotYetAssigned = ({ registry }) => {
+  const sortedByName = [...registry].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+  console.log(sortedByName);
+
   return (
     <div className="sticky">
       <h1>Not Yet Assigned:</h1>
-      {registry.map((item) => {
+      {sortedByName.map((item) => {
+        const price = item.price.toFixed(2);
         return (
-          <div key={item.id}>{!item.assignedTo && <p>{item.name}</p>}</div>
+          <div className="flex" key={item.id}>
+            {!item.assignedTo && (
+              <p>
+                {item.name} - ${price}
+              </p>
+            )}
+          </div>
         );
       })}
     </div>
