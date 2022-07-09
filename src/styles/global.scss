@@ -25,7 +25,7 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 5%;
+  gap: 2%;
   @include tablet {
     flex-direction: row;
   }
@@ -45,19 +45,39 @@ body,
   flex-wrap: wrap;
   margin: 0;
   @include tablet {
-    width: 40%;
+    width: 50%;
+  }
+  &__name {
+    width: 30%;
+    @include tablet {
+      width: auto;
+    }
+  }
+  &__price {
+    width: 20%;
+    @include tablet {
+      width: auto;
+    }
   }
 }
 
+.item-list div:nth-child(even) {
+  background-color: #f6f6f6;
+}
 .item-list__container {
   width: 100%;
-  border: 1px solid black;
-  margin: 24px;
+  margin: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  // gap: 10px;
+  padding: 5px;
+  flex-wrap: wrap;
+  justify-content: space-around;
   @include tablet {
-    width: 200px;
+    background-color: #f6f6f6;
+    margin: 24px;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -65,14 +85,21 @@ select {
   margin-bottom: 16px;
   font-family: $raleway;
   padding: 5px;
+  align-self: flex-end;
+  @include tablet {
+    align-self: center;
+  }
 }
 
 .sticky {
   padding: 16px;
-  top: 0;
-  position: sticky;
-  align-self: flex-start;
-  height: auto;
+  @include tablet {
+    flex-basis: 30%;
+    top: 0;
+    position: sticky;
+    align-self: flex-start;
+    height: auto;
+  }
 }
 
 .assigned::after {

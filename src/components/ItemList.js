@@ -16,8 +16,8 @@ const ItemList = ({ items, assignees, handleAssign }) => {
                   : "item-list__container"
               }
             >
-              <p>{item.name}</p>
-              <p>${price}</p>
+              <p className="item-list__name">{item.name}</p>
+              <p className="item-list__price">${price}</p>
               <AttendeeList
                 item={item}
                 assignees={assignees}

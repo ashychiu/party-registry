@@ -8,7 +8,7 @@ const AttendeeList = ({ item, assignees, handleAssign }) => {
         id="attendee"
         onChange={(event) => handleAssign(item, event)}
       >
-        <option defaultValue>Attendee - Budget Room</option>
+        <option defaultValue>Attendee - Available Fund</option>
         {assignees.map((assignee) => {
           const budgetLeft = assignee.budget - (assignee.budgetUsed || 0);
           return (
