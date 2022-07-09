@@ -8,7 +8,7 @@ const AssignedList = ({ registry }) => {
         return (
           <div key={item.id}>
             {item.assignedTo && (
-              <p>
+              <p className="is-assigned">
                 {item.name} - {item.assignedTo}
               </p>
             )}

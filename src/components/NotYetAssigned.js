@@ -4,7 +4,6 @@ const NotYetAssigned = ({ registry }) => {
   const sortedByName = [...registry].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
-  console.log(sortedByName);
 
   return (
     <div className="sticky">
@@ -14,7 +13,7 @@ const NotYetAssigned = ({ registry }) => {
         return (
           <div className="flex" key={item.id}>
             {!item.assignedTo && (
-              <p>
+              <p className="not-assigned">
                 {item.name} - ${price}
               </p>
             )}

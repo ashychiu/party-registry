@@ -65,7 +65,7 @@ body,
   background-color: #f6f6f6;
 }
 .item-list__container {
-  width: 100%;
+  width: 95%;
   margin: 10px;
   display: flex;
   // gap: 10px;
@@ -104,8 +104,13 @@ select {
 
 .assigned::after {
   position: relative;
-  left: 100px;
+  top: 36px;
+  left: 10px;
   content: "✅";
+  @include tablet {
+    left: 100px;
+    top: 0;
+  }
 }
 
 .footer {
@@ -128,4 +133,9 @@ a {
 .flex {
   display: flex;
   flex-direction: row;
+}
+
+.not-assigned,
+.is-assigned {
+  margin: 5px;
 }
