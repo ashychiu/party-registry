@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/global.scss";
 
 import AssignedList from "./components/AssignedList";
@@ -142,6 +142,13 @@ function App() {
       );
     }
   };
+
+  useEffect(() => {
+    const hasUnassignedItem = registry.some((item) => !item.assignedTo);
+    if (!hasUnassignedItem) {
+      alert("Well Done!");
+    }
+  }, [registry, assignees]);
 
   return (
     <>
