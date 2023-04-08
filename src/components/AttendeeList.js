@@ -7,6 +7,7 @@ const AttendeeList = ({ item, assignees, handleAssign }) => {
         name="attendee"
         id="attendee"
         onChange={(event) => handleAssign(item, event)}
+        disabled={!!item.assignedTo}
       >
         <option defaultValue>Attendee - Available Fund</option>
         {assignees.map((assignee) => {
